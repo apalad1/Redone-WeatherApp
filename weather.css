@@ -41,6 +41,7 @@ button{
 }
 
 #cityHeader{
+	text-align: center;  /*<--------------edited ------------------------*/
 	margin: 5px;
 	font-size: 42px;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -63,6 +64,7 @@ button{
 
 
 #weatherMain{
+	text-align: center; /*<--------------edited ------------------------*/
 	display: block;
 	margin-bottom: 20px;
 }
