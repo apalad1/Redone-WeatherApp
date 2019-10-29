@@ -72,7 +72,7 @@ function init(resultFromServer){
 	let cityHeader = document.getElementById('cityHeader');
 	let weatherIcon = document.getElementById('documentIconImg');
 
-	/*supposed to display icon but its not, guessing the url setup changed*/
+	
 	weatherIcon.src = 'http://openweathermap.org/img/wn/' + resultFromServer.weather[0].icon + '@2x.png'; 
 
 	let resultDescription = resultFromServer.weather[0].description;
