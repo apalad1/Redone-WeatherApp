@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather App</title>
+
+	<!--font awesome-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="weather.css">
+	<script>
+		function realtimeClock() {
+  			var today = new Date();
+  			var h = today.getHours();
+  			var m = today.getMinutes();
+  			var s = today.getSeconds();
+  			/*determin am pm*/
+  			var amPm = (h < 12) ? "AM" : "PM";
+  			/*convert out of military time*/
+  			h = (h > 12) ? h - 12 : h;
+  			/*add 0 to single digit*/
+  			h = ("0" + h).slice(-2);
+  			m = ("0" + m).slice(-2);
+  			s = ("0" + s).slice(-2);
+
+  			/*display*/
+  			document.getElementById('clock').innerHTML =
+  			h + ":" + m + ":" + s + ":" + amPm ;
+
+  			var t = setTimeout(realtimeClock, 500);
+		}
+
+		function checkTime(i) {
+  			if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  			return i;
+		}
+	</script>
+</head>
+
+
+
+<body onload="realtimeClock()">
+	<!-- the custom nav bar -->
+	<div class="topnav searchContainer">
+  		<a id ="MAIN" href="#"><span><i class="fas fa-umbrella"></i></span> Weather2</a>
+
+  		<a href="#">Contact</a>
+ 		<a href="#">About</a>
+
+ 		<!-- the search bar and button -->
+ 		<input class="searchControl" type="text" placeholder="Enter city or zip" id="searchInput">
+
+		<button class="searchControl" id="searchBtn">Search</button>
+	</div>
+
+
+
+
+	<!-- the block for all the info -->
+	<div id="weatherContainer">
+
+		<div id="weatherDescription">
+			<h1 id="cityHeader"></h1>
+
+			<div id="weatherMain">
+				<div id="temperature"></div>
+				<div id="weatherDescriptionHeader"></div>
+				<div><img id="documentIconImg"></div>
+			</div>
+
+			<hr>
+
+			<div id="windSpeed" class="bottomDetails"></div>
+			<div id="humidity" class="bottomDetails"></div>
+		</div>
+
+	</div>
+
+	<!--clock-->
+	<div id="clock"></div>
+
+	<script src="weather.js"></script>
+</body>
+
+</html>
