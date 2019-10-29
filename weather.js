@@ -3,7 +3,7 @@ let appId =''; /*insert your own openweather appid*/
 let units ='imperial';
 let searchMethod;
 
-/*CLOCK SECTION */
+/*CLOCK SECTION moved to just a script tag on html*/
 
 
 /*EVERYTHING ELSE*/
